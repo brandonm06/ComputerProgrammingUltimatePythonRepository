@@ -92,7 +92,7 @@
     | [True, False, True]  | `True`       |
     | [False, False, False]| `False`      |
     | [True, True, True]   | `True`       |
-    | [False, True, False] | `True`       |
+    | [False, True, False] | `False`       |
     | [True, False, False] | `False`      |
 
 
