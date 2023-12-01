@@ -72,7 +72,7 @@ def increasing(list):
         return True
     else:
         return False
-print("All Unique")
+print("Increasing")
 print("[1,2,3] -->", increasing([1,2,3]))
 print("[4,3,7] -->", increasing([4,3,7]))
 print("[3,3,1] -->", increasing([3,3,1]))
@@ -83,27 +83,62 @@ def all_true(list) :
     word2 = list[1]
     word3 = list[2]
 
-    if word1 == "True" and word2 == "True" and word3 == "True" :
+    if word1 == True and word2 == True and word3 == True :
         return True
     else: 
         return False
 print("All True")
-print("[False, False, True] -->", all_true(["False","False","True"]))
-print("[True, True, True] -->", all_true(["True","True","True"]))
-print("[False, True, True] -->", all_true(["False","True","True"]))
-print("[False, False, False] -->", all_true(["False","False","False"]))
+print("[False, False, True] -->", all_true([False,False,True]))
+print("[True, True, True] -->", all_true([True,True,True]))
+print("[False, True, True] -->", all_true([False,True,True]))
+print("[False, False, False] -->", all_true([False,False,False]))
 
 def mostly_true(list) :
     word1 = list[0]
     word2 = list[1]
     word3 = list[2]
 
-    if (word1 == "True" and word2 == "True") or (word1 == "True" and word3 == "True") or (word2 == "True" and word3 == "True") or (word1 == "True" and word2 == "True" and word3 == "True"):
+    if (word1 == True and word2 == True) or (word1 == True and word3 == True) or (word2 == True and word3 == True) or (word1 == True and word2 == True and word3 == True):
         return True
     else: 
         return False
-print("All True")
-print("[False, False, True] -->", mostly_true(["False","False","True"]))
-print("[True, True, True] -->", mostly_true(["True","True","True"]))
-print("[False, True, True] -->", mostly_true(["False","True","True"]))
-print("[False, False, False] -->", mostly_true(["False","False","False"]))
+print("Mostly True")
+print("[False, False, True] -->", mostly_true([False,False,True]))
+print("[True, True, True] -->", mostly_true([True,True,True]))
+print("[False, True, True] -->", mostly_true([False,True,True]))
+print("[False, False, False] -->", mostly_true([False,False,False]))
+
+def make_copy(list) :
+    return list 
+print("Make Copy")
+print("[1,2,3] -->", make_copy([1,2,3]))
+
+def repeat_thrice(num) :
+    numlist = [num, num, num]
+    return numlist
+print("Repeat Thrice")
+print("[3] -->", repeat_thrice(3))
+
+def make_reversed_copy(list) :
+    num1 = list[0]
+    num2 = list[1]
+    num3 = list[2]
+    reverselist = [num3, num2, num1]
+    return reverselist
+print("Make Reversed Copy")
+original_list = [3, 5, 1]
+new_list = make_reversed_copy(original_list)
+print("original list: ", original_list)
+print("new list: ", new_list)
+
+def reverse_in_place(list) :
+    listold3 = list[0]
+    listold1 = list[2]
+    list[0] = listold1
+    list[2] = listold3
+    return list
+print("Reverse In Place")
+original_list = [3, 5, 1]
+new_list = reverse_in_place(original_list)
+print("original list: ", original_list)
+print("new list: ", new_list)
