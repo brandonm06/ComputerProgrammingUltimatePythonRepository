@@ -37,8 +37,11 @@ def average_act_score(scores) :
     for score in scores :
         if score > 0 and score < 37 :
             scorecount = scorecount + 1
-            scoretotal = 0 + score
-
+            scoretotal = scoretotal + score
+    
+    if scorecount == 0:
+        return None
+    
     return scoretotal / scorecount
 
 print("Average ACT Score")
