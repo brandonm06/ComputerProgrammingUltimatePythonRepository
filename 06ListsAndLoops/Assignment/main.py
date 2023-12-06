@@ -147,21 +147,20 @@ print("1,2,3", has_adjacent_repeat([1,2,3]))
 print("0,1,4", has_adjacent_repeat([0,1,4]))
 
 def sum_with_skips(list) :
-    badnumber = -1
     ignoring = False
     total = 0
    
     for number in list :
-        if number == badnumber:
-            ignoring = True
-        elif ignoring == True and number == badnumber:
+        if ignoring == True and number == -1:
             ignoring = False
+        elif number == -1:
+            ignoring = True
         elif ignoring == False:
             total = total + number
 
     return total
 
 print("1,2,-1,2,1,-1,1", sum_with_skips([1,2,-1,2,1,-1,1]))
-print("1,1,-1,1,-1,1", sum_with_skips([1,1,-1,1,-1,1]))
+print("1,1,-1,1,-1,1,4", sum_with_skips([1,1,-1,1,-1,1,4]))
 
         
