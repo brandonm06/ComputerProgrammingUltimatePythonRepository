@@ -89,7 +89,7 @@ def to_camel_case(phrase) :
             result = result + letter.upper()
             firstletter = False
         elif letter == " " :
-            result = result + letter
+            pass
             firstletter = True
         elif firstletter == False :
             result = result + letter
@@ -119,9 +119,20 @@ def without_duplicates(list) :
             result.append(number)
     return result
 
-
 print("Without Duplicates")
 print("1,1,2,4,4 -->", without_duplicates([1,1,2,4,4]))
+
+def filter_valid_act_scores(list):
+    valid = []
+    for number in list :
+        if number > 0 and number < 37 :
+            valid.append(number)
+        else: pass
+    return valid
+
+print("Filter Valid ACT Scores")
+print("32,45,12,95,52 -->", filter_valid_act_scores([32,45,12,95,52]))
+
 
             
         
