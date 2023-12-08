@@ -41,6 +41,9 @@ print("mississippi, p -->", count_target_letters("mississippi","p"))
 print("alabama, a -->", count_target_letters("alabama","a"))
 
 def in_alphabetical_order(word) :
+    if len(word) == 0:
+        return True
+    
     firstletter = word[0]
     for letters in word :
         if letters > firstletter:
@@ -83,7 +86,7 @@ print("alabama -->", remove_vowels("alabama"))
 
 def to_camel_case(phrase) :
     result = ""
-    firstletter = True
+    firstletter = False
     for letter in phrase :
         if firstletter == True :
             result = result + letter.upper()
