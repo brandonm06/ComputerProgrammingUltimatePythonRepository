@@ -41,11 +41,32 @@ def number_guesser_with_lives() :
         elif response == secretnumber :
             print("Correct!")
             iscorrect = True
-        if lives == 0 :
-            print("You LOSE")
-            iscorrect = True
 
 def vending_machine() :
     amountdue = 50
-    while amountdue != 0 :
-        print
+    nickel = 5
+    dime = 10
+    quarter = 25
+
+    while amountdue > 0 :
+        print("Amount due:", amountdue)
+        response = int(input())
+        if response == nickel :
+            amountdue = amountdue - nickel
+        elif response == dime :
+            amountdue = amountdue - dime
+        elif response == quarter : 
+            amountdue = amountdue - quarter
+    if amountdue == 0 :
+        print("Thank You!")
+    elif amountdue < 0 :
+        print("Change given:", (amountdue * -1))
+
+
+def hangman() : 
+    words : ["tower","fortnite","computer"]
+    randomgen = random.randint(0,2)
+    randomword = words[randomgen]
+    blankcount = randomword.count()
+    return blankcount
+hangman()
