@@ -64,7 +64,7 @@ def vending_machine() :
 
 
 def hangman() : 
-    words : ["tower","fortnite","computer"]
+    words =["tower","monitor","computer"]
     randomgen = random.randint(0,2)
     randomword = words[randomgen]
     blankcount = randomword.count()
