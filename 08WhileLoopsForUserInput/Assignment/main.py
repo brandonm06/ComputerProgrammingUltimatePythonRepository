@@ -67,6 +67,7 @@ def hangman() :
     words =["tower","monitor","computer"]
     randomgen = random.randint(0,2)
     randomword = words[randomgen]
-    blankcount = randomword.count()
+    blankcount = len(randomword)
     return blankcount
 hangman()
+
